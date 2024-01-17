@@ -13,7 +13,7 @@ export default {
   data(){
     return {
       complete: '',
-      completing: null
+      completing: []
     }
   },
   methods: {
@@ -27,12 +27,12 @@ export default {
       console.log(request.data)
       this.completing = request.data
       if (this.complete === ''){
-        this.completing = null
+        this.completing = []
       }
     },
     changeValue(word){
       this.complete = word
-      this.completing = null
+      this.completing = []
     }
   }
 }
